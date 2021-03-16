@@ -1,1 +1,1 @@
-# Javascript
+# Training at Javascript code
