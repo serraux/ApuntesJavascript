@@ -1,1 +1,1 @@
-# ApuntesJavascript
+# Training at Javascript code
