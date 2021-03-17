@@ -41,6 +41,8 @@ var hero =
   ]
 }
 
+var producto = 
+{"id":110101,"name":'arroz',"package":bolsa,"weight":250,"w-units":'gramos',"stock":480,"marca":'diana'}
 
 
 array = Object.keys(example['members']);
