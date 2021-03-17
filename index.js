@@ -35,14 +35,28 @@ var hero =
         "Heat Immunity",
         "Inferno",
         "Teleportation",
-        "Interdimensional travel"
+        "Interdimensional travel",
+  
       ]
     }
   ]
 }
 
-var producto = 
-{"id":110101,"name":'arroz',"package":bolsa,"weight":250,"w-units":'gramos',"stock":480,"marca":'diana'}
+var 
+producto
+ = {
+"id":110101,
+"name":"arroz",
+"package":"bolsa",
+"weight":250,
+"w-units":"gramos",
+"stock":480,
+"marca":"diana",
+"price":2250
+}
+
+
+
 
 
 array = Object.keys(example['members']);
