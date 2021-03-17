@@ -2,7 +2,7 @@
 /* https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON */
 
 /* 1. Se obtiene el archivo JSON con la API XMLHttpRequest */
-const requestURL = 'https://raw.githubusercontent.com/serraux/Javascript/main/index.json';
+const requestURL = "https://raw.githubusercontent.com/serraux/Javascript/main/index.json";
 
 /* 2. Crear una nueva instancia de objeto de solicitud desde el constructor XMLHttpRequest */
 const request = new XMLHttpRequest();
