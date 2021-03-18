@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+
+/*Definición de valores iniciales*/
+* {
+  margin: 0;
+  margin: 0;
+  list-style: none;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--white);
+}
+html {
+  box-sizing: border-box;
+  /* Set font sz for easy rem calculations
+   * default document font sz = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Valores personalizados */
+:root {
+  --orange: #cf4c28;
+  --red: #cf2727;
+  --blue: #2857cf85;
+  --green: #27cf65;
+  --gray: #2b3030;
+  --white: #f2f2f2;
+  /* sz = sz */
+  --sz-1: 0.125rem;
+  --sz-2: 0.25rem;
+  --sz-3: 0.5rem;
+  --sz-4: 0.75rem;
+  --sz-5: 1rem; /* one */
+  --sz-6: 1.125rem;
+  --sz-7: 1.25rem;
+  --sz-8: 1.5rem;
+  --sz-9: 1.75rem;
+  --sz-10: 2rem; /* two */
+  --sz-11: 2.125rem;
+  --sz-12: 2.25rem;
+  --sz-13: 2.5rem;
+  --sz-14: 2.75rem;
+  --sz-15: 3rem; /* three */
+  /* Fuentes */
+  --fontR: "Roboto", "Poppins", sans-serif;
+  --fontP: "Poppins", "Roboto", sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+  font-family: "Roboto", "Poppins", sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  background: var(--gray);
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: calc(var(--sz-15) * 2);
+}
+
+h2 {
+  font-size: calc(var(--sz-15) * 1.2);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+/* text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0px -1px 2px rgba(255,255,255,0.8); */
+/*Consulta de medios para ajustar el tamaño de las fuentes*/
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* CSS Custom */
+
+main {
+  width: 100%;
+  /* navbar */
+  .navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    .nav-list {
+      display: flex;
+      width: 100%;
+      background-color: var(--orange);
+      color: var(--white);
+      justify-content: flex-end;
+      padding-right: var(--sz-8);
+      .nav-item {
+        a {
+          display: block;
+          margin-right: var(--sz-1);
+          height: 100%;
+          padding: var(--sz-5);
+          font-family: "Roboto";
+          &:hover {
+            background: var(--white);
+            color: var(--orange);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  /* Welcome Section */
+  #welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: calc(var(--sz-10) * 5);
+    h1 {
+      color: var(--orange);
+      font-family: Roboto, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    p {
+      text-align: center;
+      color: var(--orange);
+      font-size: var(--sz-10);
+      font-family: Roboto, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+  /* Projects section*/
+  .projetcs-section {
+    background: var(--blue);
+    width: 100%;
+    //height: 100vh;
+    padding: calc(var(--sz-15) * 2);
+    h2 {
+      margin-bottom: var(--sz-15);
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 4rem;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      margin-bottom: var(--sz-10);
+      a {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 2px;
+
+        &:hover .code {
+          color: var(--orange);
+          font-weight: bold;
+        }
+      }
+      p {
+        text-align: center;
+        background: var(--gray);
+        padding: var(--sz-10);
+        font-family: Roboto, sans-serif;
+      }
+      .project-image {
+        height: calc(100% - 6.8rem);
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .section-contact {
+    background: var(--gray);
+    width: 100%;
+    height: auto;
+    padding: calc(var(--sz-15) * 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: var(--sz-10);
+    .logos-profile {
+      width: 15vh;
+      height: auto;
+      margin: var(--sz-10);
+
+      &:hover {
+        transition: transform 0.3s ease-out;
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        -o-transform: translateY(-8px);
+      }
+    }
+  }
+
+  #container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-family: var(--fontR);
+    }
+    #title {
+      position: relative;
+      width: 80%;
+      height: auto;
+      background: var(--blue);
+      margin: calc(var(--sz-10) * 3);
+      margin-bottom: 0;
+    }
+    #description {
+      position: relative;
+      width: 80%;
+      height: auto;
+      background: var(--green);
+      margin: calc(var(--sz-1) * 3);
+    }
+  }
+}
+/* Consulta de medios */
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+/* 768px / 16px = 48em */
+@media (min-width: 48em) {
+  main {
+    .section-contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h2 {
+        padding-right: var(--sz-10);
+        border-right: 1px solid var(--orange);
+      }
+    }
+  }
+}
+/* 1024px / 16px = 64em */
+@media (min-width: 64em) {
+  main {
+    .section-contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      h2 {
+        padding-right: var(--sz-10);
+        border-right: 1px solid var(--orange);
+      }
+    }
+  }
+}
