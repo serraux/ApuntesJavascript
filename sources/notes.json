@@ -1,0 +1,6 @@
+{
+  "title": "Agrega datos al final de una matriz.",
+  "action": "Agrega datos al final de una matriz.",
+  "code": ".push()",
+  "example": "myArray.push(4)"
+}
