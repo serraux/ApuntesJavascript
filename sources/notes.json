@@ -1,6 +1,82 @@
 {
-  "title": "Agrega datos al final de una matriz.",
-  "action": "Agrega datos al final de una matriz.",
-  "code": ".push()",
-  "example": "myArray.push(4)"
+  "notes": [
+    {
+      "title": "Agrega datos al final de una matriz.",
+      "action": "Agrega datos al final de una matriz.",
+      "code": ".push()",
+      "example": "myArray.push(4)"
+    },
+    {
+      "title": "Agrega datos al inicio de una matriz.",
+      "action": "Agrega datos al inicio de una matriz.",
+      "code": ".unshift",
+      "example": "myArray.unshift(4)"
+    },
+    {
+      "title": "Elimina el último elemento de una matriz",
+      "action": "Elimina el último elemento de una matriz",
+      "code": ".pop()",
+      "example": "myArray.pop()"
+    },
+    {
+      "title": "Elimina el primer elemento de una matriz",
+      "action": "Elimina el primer elemento de una matriz",
+      "code": ".shift",
+      "example": "myArray.shift()"
+    },
+    {
+      "title": "Determinar si ese objeto tiene el nombre de propiedad dado.",
+      "action": "Determinar si ese objeto tiene el nombre de propiedad dado.",
+      "code": ".hasOwnProperty(propname)",
+      "example": ".hasOwnProperty()devuelve trueo falsesi la propiedad se encuentra o no."
+    },
+    {
+      "title": "Acceder al valor de una propiedad de un objeto.",
+      "action": "Acceder al valor de una propiedad de un objeto.",
+      "code": "obj[nameProperty]",
+      "example": "data"
+    },
+    {
+      "title": "Acceder a matrices anidadas",
+      "action": "Acceder a matrices anidadas",
+      "code": "ourPets[0].names[1];",
+      "example": "data"
+    },
+    {
+      "title": "Congelar un objeto para evitar su modificación",
+      "action": "Congelar un objeto para evitar su modificación",
+      "code": "Object.freeze(obj);",
+      "example": "data"
+    },
+    {
+      "title": "Crear arrow function",
+      "action": "Crear arrow function",
+      "code": "const magic = () => new Date();",
+      "example": "let magic = () => new Date()"
+    },
+    {
+      "title": "concatena cadenas ",
+      "action": "concatena cadenas ",
+      "code": "concat(arr2)",
+      "example": "const myConcat = (arr1, arr2) => arr1.concat(arr2)"
+    },
+    {
+      "title": "Establecer parámetros predeterminados para sus funciones",
+      "action": "Establecer parámetros predeterminados para sus funciones",
+      "code": "const greeting = (name ='Anonymous') =>'Hello ' + name;",
+      "example": "data"
+    },
+    {
+      "title": "Crear Objeto",
+      "action": "Crear Objeto",
+      "code": " var obj { clave:valor;}",
+      "example": "data"
+    },
+    {
+      "title": "Crear elementos html en javascritpt",
+      "action": "Crear elementos html en javascritpt",
+      "code": "const myH2 = document.createElement('h2');",
+      "example": " const myArticle = document.createElement('article')"
+    }
+  ]
 }
