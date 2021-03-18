@@ -321,8 +321,43 @@ main #container #description {
   position: relative;
   width: 80%;
   height: auto;
-  background: var(--green);
+  background: var(--red);
   margin: calc(var(--sz-1) * 3);
+}
+
+main #container #description header {
+  padding: 0.5em;
+  background: #e6e3e6;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #container #description header h1 {
+  font-family: var(--fontR);
+  font-size: var(--sz-10);
+}
+
+main #container #description header a img {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  margin-left: 7px;
+}
+
+main #container #description p {
+  padding: 0.2em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main #container #description p code {
+  display: block;
+  width: 95%;
+  background: #f78b2c;
+  padding: 0.2em;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* Consulta de medios */

@@ -256,8 +256,37 @@ main {
       position: relative;
       width: 80%;
       height: auto;
-      background: var(--green);
+      background: var(--red);
       margin: calc(var(--sz-1) * 3);
+      header {
+        padding: 0.5em;
+        background: rgb(230, 227, 230);
+        font-family: "Century Gothic", sans-serif;
+        font-weight: bold;
+        display: flex;
+        h1 {
+          font-family: var(--fontR);
+          font-size: var(--sz-10);
+        }
+
+        a img {
+          width: 20px;
+          height: auto;
+          display: inline-block;
+          margin-left: 7px;
+        }
+      }
+      p {
+        padding: 0.2em;
+        font-family: Roboto, "Century Gothic", sans-serif;
+        code {
+          display: block;
+          width: 95%;
+          background: rgb(247, 139, 44);
+          padding: 0.2em;
+          font-family: "Courier New", Courier, monospace;
+        }
+      }
     }
   }
 }
