@@ -110,3 +110,5 @@ console.log(zeus.targetPlanet);
 /* import { add } from './math_functions.js'; */
 /* export{add}; 
 Utilice * para importar todo desde un archivo*/
+
+/* https://raw.githubusercontent.com/serraux/Javascript/main/sources/notes.json */

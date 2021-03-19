@@ -27,26 +27,61 @@
           </li>
         </ul>
       </nav>
-      <di class="container" id="container">
+      <div class="container" id="container">
         <div class="title" id="title"><h1>Class note</h1></div>
         <div class="description" id="description">
-          <div class="item">
-            <header><h1>titulo 1</h1></header>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-              pariatur esse quasi <code>ipsa cum repudiandae</code> animi
-              libero, doloribus cumque odio delectus quae excepturi ab veritatis
-              nihil perspiciatis placeat assumenda accusamus.
-            </p>
-          </div>
+          <div class="item"></div>
         </div>
-      </di>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
-        quisquam sequi iste totam porro, ex corrupti dignissimos, nobis, odit
-        nam minima? Cupiditate voluptatum neque quis enim voluptatibus.
-        Perspiciatis, ex aut.
-      </p>
+      </div>
+
+      <script>
+        /* Crear conexión con la htmltag clase .item*/
+        const item = document.querySelector(".item");
+        /* 1. Se obtiene el archivo JSON con la API XMLHttpRequest */
+        const requestURL =
+          "https://raw.githubusercontent.com/serraux/Javascript/main/sources/notes.json";
+        /* 2. Crear una nueva instancia de objeto de solicitud desde el constructor XMLHttpRequest */
+        const request = new XMLHttpRequest();
+
+        /* 3. Abrir una nueva solicitud utilizando el método open(). */
+        request.open("GET", requestURL);
+
+        /* 4. Establecer el responseType a JSON, de esta forma ese XHR sabe que el servidor estará retornando JSON y que esto
+        debería ser convertido en segundo plano en un objeto JavaScript. Luego se envía la solicitud con el método send(): */
+        request.responseType = "json";
+        request.send();
+        /* 5. Esperar por la respuesta a retornar desde el servidor y luego, manejarla.  */
+        request.onload = function () {
+          const notesJs = request.response;
+
+          renderitem(notesJs);
+          // showHeroes(notesjs);
+        };
+        /* 6. Construir función renderitem */
+        function renderitem(objNotesJs) {
+          /* Obtener array */
+          const arrayNotes = objNotesJs["notes"];
+
+          /* Asignar datos a etiquetas html */
+          for (let i = 0; i < arrayNotes.length; i++) {
+            const title = document.createElement("h1");
+            const action = document.createElement("p");
+            const code = document.createElement("span");
+            const example = document.createElement("p");
+
+            title.textContent = arrayNotes[i].title;
+            action.textContent = arrayNotes[i].action;
+            code.textContent = arrayNotes[i].code;
+            example.textContent = arrayNotes[i].example;
+
+            item.appendChild(title);
+            item.appendChild(action);
+            item.appendChild(code);
+            item.appendChild(example);
+          }
+        }
+      </script>
+
       <!-- Seccion de contacto -->
       <section class="section-contact" id="section-contact">
         <h2>Trabajemos juntos</h2>
