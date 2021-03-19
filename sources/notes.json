@@ -323,6 +323,36 @@
       "action": "En las expresiones regulares, una coincidencia codiciosa encuentra la parte más larga posible de una cadena que se ajusta al patrón de expresiones regulares y la devuelve como una coincidencia. La alternativa se llama coincidencia diferida , que encuentra la parte más pequeña posible de la cadena que satisface el patrón de expresiones regulares.",
       "code": "expresión regular /t[a-z]*i/a la cadena 'titanic'. Esta expresión regular es básicamente un patrón que comienza con t, termina con iy tiene algunas letras en el medio. Las expresiones regulares son codiciosas por defecto, por lo que la coincidencia volvería ['titani']. Encuentra la subcadena más grande posible para ajustarse al patrón.",
       "example": "Sin embargo, puedes usar el ?personaje para cambiarlo a una coincidencia perezosa. 'titanic'comparado con la expresión regular ajustada de las /t[a-z]*?i/devoluciones ['ti']. Nota: Se debe evitar analizar HTML con expresiones regulares, pero el patrón que coincide con una cadena HTML con expresiones regulares está completamente bien."
+    },
+    {
+      "title": "coincidir patrones de cuerdas finales",
+      "action": "Puede buscar al final de las cadenas utilizando el carácter de signo de dólar $ al final de la expresión regular.",
+      "code": "let theEnding = 'This is a never ending story'; let storyRegex = /story$/;",
+      "example": "La primera testllamada volvería true."
+    },
+    {
+      "title": "Coincidir con todas las letras y números",
+      "action": "Con las clases de caracteres, pudo buscar todas las letras del alfabeto con [a-z]. Este tipo de clase de caracteres es lo suficientemente común como para que tenga un atajo, aunque también incluye algunos caracteres adicionales. La clase de carácter más cercana en JavaScript para coincidir con el alfabeto es w. Este atajo es igual a [A-Za-z0-9_]. Esta clase de caracteres coincide con letras mayúsculas y minúsculas más números. Tenga en cuenta que esta clase de caracteres también incluye el carácter de subrayado ( _).",
+      "code": "let longHand = /[A-Za-z0-9_]+/; let shortHand = /w+/; let numbers = '42'; let varNames = 'important_var'; longHand.test(numbers); shortHand.test(numbers); longHand.test(varNames); shortHand.test(varNames);",
+      "example": "Las cuatro de estas testllamadas volverían true. Estas clases de caracteres abreviados también se conocen como clases de caracteres abreviados ."
+    },
+    {
+      "title": "Coincidir con todo menos letras y números",
+      "action": "Ha aprendido que puede usar un atajo para hacer coincidir alfanuméricos [A-Za-z0-9_]usando w. Un patrón natural que quizás desee buscar es lo opuesto a los alfanuméricos. Puede buscar lo contrario de wcon W. Tenga en cuenta que el patrón opuesto usa una letra mayúscula. Este atajo es el mismo que [^A-Za-z0-9_].",
+      "code": "let shortHand = /W/; let numbers = '42%'; let sentence = 'Coding!'; numbers.match(shortHand); sentence.match(shortHand); ",
+      "example": "La primera matchllamada devolvería el valor ['%']y la segunda volvería ['!']."
+    },
+    {
+      "title": "Coincidir con todos los números",
+      "action": "Ha aprendido atajos para patrones de cadenas comunes como alfanuméricos. Otro patrón común es buscar solo dígitos o números.",
+      "code": "El atajo para buscar caracteres de dígitos es d, con minúsculas d. Esto es igual a la clase de caracteres [0-9], que busca un solo carácter de cualquier número entre cero y nueve.",
+      "example": "es d"
+    },
+    {
+      "title": "Coincidir con todos los que no son números",
+      "action": "El último desafío mostró cómo buscar dígitos usando el atajo d con minúsculas d. También puede buscar sin dígitos usando un atajo similar que usa mayúsculas en su D lugar.",
+      "code": "El atajo para buscar caracteres que no son dígitos es D. Esto es igual a la clase de caracteres [^0-9], que busca un solo carácter que no sea un número entre cero y nueve.",
+      "example": "es D"
     }
   ]
 }
