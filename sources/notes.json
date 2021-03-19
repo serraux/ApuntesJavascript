@@ -87,7 +87,7 @@
     {
       "title": "Parámetro rest",
       "action": "Parámetro rest para los parámetros de función. El parámetro rest elimina la necesidad de verificar la matriz args y nos permite aplicar map(), filter() y reduce() en la matriz de parámetros. Los … puntos es el operador que va acompañado en este ejemplo de la palabra args",
-      "code": "function howMany(...args) {  return --You have passed-- + args.length +-- arguments.--;}",
+      "code": "function howMany(...args) {  return 'You have passed' + args.length +' arguments.';}",
       "example": "data"
     },
     {
@@ -103,7 +103,7 @@
       "example": "Tuvimos que usar Math.max.apply(null, arr) porque Math.max(arr)devuelve NaN. Math.max()espera argumentos separados por comas, pero no una matriz. El operador de propagación hace que esta sintaxis sea mucho mejor de leer y mantener. el operador de propagación solo funciona en el lugar, como en un argumento para una función o en un literal de matriz"
     },
     {
-      "title": "",
+      "title": "asignación de desestructuración",
       "action": "La asignación de desestructuración es una sintaxis especial introducida en ES6, para asignar claramente valores tomados directamente de un objeto.",
       "code": "const {prop1, prop2 } = object;",
       "example": "const HIGH_TEMPERATURES = {  yesterday: 75,  today: 77,  tomorrow: 80 } const {today, tomorrow} = HIGH_TEMPERATURES"
@@ -112,7 +112,7 @@
       "title": "Cambiar nombres con la asignación de desestructuración",
       "action": "Cambiar nombres con la asignación de desestructuración",
       "code": "const {names:newName , age:newAge } = user;",
-      "example": "const { johnDoe: { age, email }} = user ----- const { johnDoe: { age:newAge, email:newEmail }} = user"
+      "example": "const { johnDoe: { age, email }} = user ''- const { johnDoe: { age:newAge, email:newEmail }} = user"
     },
     {
       "title": "desestructuración para asignar variables de objetos anidados.",
@@ -141,7 +141,7 @@
     {
       "title": " cadenas con literales de plantilla",
       "action": "Crear cadenas con literales de plantilla. Una nueva característica de ES6 es la plantilla literal . Este es un tipo especial de cuerda que facilita la creación de cuerdas complejas. Los literales de plantilla le permiten crear cadenas de varias líneas y utilizar funciones de interpolación de cadenas para crear cadenas.",
-      "code": "const person = {  name: --Zodiac Hasbro--,  age: 56};const greeting = `Hello, myname is ${person.name}!I am ${person.age} years old.`;console.log(greeting);",
+      "code": "const person = {  name: 'Zodiac Hasbro',  age: 56};const greeting = `Hello, myname is ${person.name}!I am ${person.age} years old.`;console.log(greeting);",
       "example": "La consola mostrará las cadenas Hello, my name is Zodiac Hasbro!y I am 56 years old."
     },
     {
@@ -153,8 +153,8 @@
     {
       "title": "cadenas literales",
       "action": "Aplicación de cadenas literales",
-      "code": "for(var i= 0; i < arr.length; i++){ failureItems[i] = `<li class=--text-warning-- >${arr[i]}</li>`; }",
-      "example": "salida:[  '<li class=--text-warning-->no-var</li>',   '<li class=--text-warning-->var-on-top</li>',  '<li class=--text-warning-->linebreak</li>' ]"
+      "code": "for(var i= 0; i < arr.length; i++){ failureItems[i] = `<li class='text-warning' >${arr[i]}</li>`; }",
+      "example": "salida:[  '<li class='text-warning'>no-var</li>',   '<li class='text-warning'>var-on-top</li>',  '<li class='text-warning'>linebreak</li>' ]"
     },
     {
       "title": "declaraciones concisas de literales de objetos",
@@ -165,7 +165,7 @@
     {
       "title": "funciones declarativas concisas",
       "action": "Escribir funciones declarativas concisas con ES6",
-      "code": "const person = {  name: --Taylor--,  sayHello() {  return `Hello! My name is ${this.name}.`;  }};",
+      "code": "const person = {  name: 'Taylor',  sayHello() {  return `Hello! My name is ${this.name}.`;  }};",
       "example": "data"
     },
     {
@@ -183,13 +183,13 @@
     {
       "title": "getters y setters",
       "action": "Utilice captadores y definidores para controlar el acceso a un objeto. Las funciones de obtención están destinadas a simplemente devolver (obtener) el valor de la variable privada de un objeto al usuario sin que el usuario acceda directamente a la variable privada. Las funciones de establecimiento están destinadas a modificar (establecer) el valor de la variable privada de un objeto en función del valor pasado a la función de establecimiento. Este cambio podría implicar cálculos o incluso sobrescribir completamente el valor anterior. ",
-      "code": "class Book {  constructor(author) {    this._author = author;  }  --- getter  get writer(){    return this._author;  }  --- setter  set writer(updatedAuthor) { this._author = updatedAuthor;  }}",
+      "code": "class Book {  constructor(author) {    this._author = author;  }  '- getter  get writer(){    return this._author;  }  '- setter  set writer(updatedAuthor) { this._author = updatedAuthor;  }}",
       "example": "const novel = new Book('anonymous') console.log(novel.writer) novel.writer = 'newAuthor' console.log(novel.writer)//La consola mostraría las cadenas anonymousy newAuthor. Observe la sintaxis utilizada para invocar al getter y al setter."
     },
     {
       "title": "Crear un script de módulo",
       "action": "JavaScript comenzó con un pequeño papel que desempeñar en una web que de otro modo sería principalmente HTML. Hoy en día, es enorme y algunos sitios web están construidos casi en su totalidad con JavaScript. Para hacer que JavaScript sea más modular, limpio y fácil de mantener; ES6 introdujo una forma de compartir fácilmente código entre archivos JavaScript. Esto implica exportar partes de un archivo para usar en uno o más archivos e importar las partes que necesita, donde las necesita. Para aprovechar esta funcionalidad, debe crear un script en su documento HTML con una extensión typede module. ",
-      "code": "<script type=--module-- src=--filename.js--></script>",
+      "code": "<script type='module' src='filename.js'></script>",
       "example": "Un script que usa este moduletipo ahora puede usar las funciones importy exportque aprenderá en los próximos desafíos."
     },
     {
@@ -207,7 +207,7 @@
     {
       "title": "Utilice * para importar todo desde un archivo",
       "action": "Suponga que tiene un archivo y desea importar todo su contenido al archivo actual. Esto se puede hacer con la import * assintaxis. A continuación, se muestra un ejemplo en el que el contenido de un archivo con nombre math_functions.jsse importa a un archivo en el mismo directorio:",
-      "code": "import * as myMathModule from --./math_functions.js--;",
+      "code": "import * as myMathModule from './math_functions.js';",
       "example": "La importdeclaración anterior creará un objeto llamado myMathModule. Este es solo un nombre de variable, puedes nombrarlo como quieras. El objeto contendrá todas las exportaciones desde math_functions.jsél, por lo que puede acceder a las funciones como lo haría con cualquier otra propiedad de objeto. A continuación, le indicamos cómo puede utilizar las funciones addy subtractque se importaron: myMathModule.add(2,3); myMathModule.subtract(5,3)"
     },
     {
@@ -219,7 +219,7 @@
     {
       "title": "Importar una exportación predeterminada",
       "action": "En el último desafío, aprendiste sobre export defaultsus usos. Para importar una exportación predeterminada, debe utilizar una importsintaxis diferente . En el siguiente ejemplo, addes la exportación predeterminada del math_functions.jsarchivo. A continuación se explica cómo importarlo:",
-      "code": "import add from --./math_functions.js--;",
+      "code": "import add from './math_functions.js';",
       "example": "La sintaxis difiere en un lugar clave. El valor importado, addno está rodeado por llaves ( {}). addaquí es simplemente un nombre de variable para cualquiera que sea la exportación predeterminada del math_functions.jsarchivo. Puede utilizar cualquier nombre aquí al importar un archivo."
     },
     {
@@ -231,7 +231,7 @@
     {
       "title": "Complete a Promise with resolve and reject",
       "action": "na promesa tiene tres estados: pending, fulfilled, y rejected. La promesa que creaste en el último desafío está estancada para siempre en el pendingestado porque no agregaste una forma de completar la promesa. Los parámetros resolvey rejectdados al argumento de promesa se utilizan para hacer esto. resolvese usa cuando desea que su promesa tenga éxito y rejectse usa cuando desea que fracase. Estos son métodos que toman un argumento, como se ve a continuación.",
-      "code": "const myPromise = new Promise((resolve, reject) => {  if(condition here) {    resolve(--Promise was fulfilled--);  } else {    reject(--Promise was rejected--);  }});",
+      "code": "const myPromise = new Promise((resolve, reject) => {  if(condition here) {    resolve('Promise was fulfilled');  } else {    reject('Promise was rejected');  }});",
       "example": "El ejemplo anterior usa cadenas para el argumento de estas funciones, pero realmente puede ser cualquier cosa. A menudo, podría ser un objeto del que usaría datos para colocar en su sitio web o en otro lugar."
     },
     {
@@ -245,6 +245,84 @@
       "action": "catches el método utilizado cuando su promesa ha sido rechazada. Se ejecuta inmediatamente después de rejectllamar al método de una promesa . Esta es la sintaxis:",
       "code": "myPromise.catch(error => {});",
       "example": "errores el argumento que se pasa al rejectmétodo."
+    },
+    {
+      "title": "método de prueba",
+      "action": "Las expresiones regulares se utilizan en lenguajes de programación para hacer coincidir partes de cadenas. Creas patrones para ayudarte a hacer esa combinación. Si usted quiere encontrar la palabra theen la cadena The dog chased the cat, se puede usar la siguiente expresión regular: /the/. Tenga en cuenta que las comillas no son necesarias dentro de la expresión regular. JavaScript tiene varias formas de usar expresiones regulares. Una forma de probar una expresión regular es usar el .test()método. El .test()método toma la expresión regular, la aplica a una cadena (que se coloca entre paréntesis) y devuelve trueo falsesi su patrón encuentra algo o no.",
+      "code": "let testStr = 'freeCodeCamp'; let testRegex = /Code/; testRegex.test(testStr);",
+      "example": "El testmétodo aquí regresa true."
+    },
+    {
+      "title": "coincidir una cadena literal con diferentes posibilidades",
+      "action": "Puede buscar varios patrones de uso de la alternationo ORdel operador: Este operador hace coincidir patrones antes o después de él. Por ejemplo, si desea hacer coincidir las cadenas yeso no, la expresión regular que desea es /yes|no/. También puede buscar más de dos patrones. Puede hacer esto agregando más patrones con más ORoperadores separándolos, como /yes|no|maybe/.",
+      "code": "let petString = 'James has a pet cat.'; let petRegex = /dog|cat|bird|fish/;",
+      "example": "let result = petRegex.test(petString);"
+    },
+    {
+      "title": "Ignorar mayúsculas y minúsculas durante la coincidencia",
+      "action": "El caso (o a veces el caso de la letra) es la diferencia entre letras mayúsculas y minúsculas. Ejemplos de mayúsculas son A, B, y C. Ejemplos de minúsculas son a, b, y c. Puede hacer coincidir ambos casos usando lo que se llama una bandera. Hay otras banderas, pero aquí se enfocará en la bandera que ignora las mayúsculas y minúsculas: la ibandera. Puede usarlo agregándolo a la expresión regular. ",
+      "code": "Un ejemplo del uso de esta bandera es /ignorecase/i.",
+      "example": "Esta expresión regular puede igualar las cuerdas ignorecase, igNoreCasey IgnoreCase."
+    },
+    {
+      "title": "Extraer coincidencias",
+      "action": "Hasta ahora, solo ha estado verificando si existe un patrón o no dentro de una cadena. También puede extraer las coincidencias reales que encontró con el .match()método. Para usar el método .match(), aplique el método en una cadena y pase la expresión regular entre paréntesis.",
+      "code": "Hello, World!'.match(/Hello/); let ourStr = 'Regular expressions'; let ourRegex = /expressions/; ourStr.match(ourRegex);",
+      "example": "Aquí match volvería el primero ['Hello']y volvería el segundo ['expressions']. Tenga en cuenta que la .matchsintaxis es 'opuesta' al .testmétodo que ha estado utilizando hasta ahora: 'string'.match(/regex/); /regex/.test('string');"
+    },
+    {
+      "title": "Encontrar más de una coincidencia",
+      "action": "Para encontrar más de unha coincidenciase debe utilizar labvandera g",
+      "code": "let testStr = 'Repeat, Repeat, Repeat'; let repeatRegex = /Repeat/g; testStr.match(repeatRegex);",
+      "example": "Y aqui match devuelve el valor['Repeat', 'Repeat', 'Repeat']. Nota: Puede tener varias banderas en su expresión regular como/search/gi"
+    },
+    {
+      "title": "Carácter comodín",
+      "action": "A veces no (o no es necesario) conocer los caracteres exactos en sus patrones. Pensando en todas las palabras que coinciden, digamos, una falta de ortografía llevaría mucho tiempo. Afortunadamente, puede ahorrar tiempo utilizando el carácter comodín:.  l carácter comodín .coincidirá con cualquier carácter. El comodín también se llama doty period. Puede utilizar el carácter comodín como cualquier otro carácter en la expresión regular. Por ejemplo, si desea hacer coincidir hug, huh, hut, y hum, se puede utilizar la expresión regular /hu./para que coincida con las cuatro palabras.",
+      "code": "let humStr = 'I'll hum a song'; let hugStr = 'Bear hug'; let huRegex = /hu./; huRegex.test(humStr); huRegex.test(hugStr);",
+      "example": "Ambas testllamadas regresarían true."
+    },
+    {
+      "title": "Combina un solo caracter con múltiples posibilidades",
+      "action": "Aprendió a hacer coincidir patrones literales ( /literal/) y caracteres comodín ( /./). Esos son los extremos de las expresiones regulares, donde uno encuentra coincidencias exactas y el otro coincide con todo. Hay opciones que son un equilibrio entre los dos extremos.Puede buscar un patrón literal con cierta flexibilidad con las clases de caracteres . Las clases de caracteres le permiten definir un grupo de caracteres que desea hacer coincidir colocándolos entre corchetes ( [y ]). Por ejemplo, desea hacer coincidir bag, bigy bugpero no bog. Puede crear la expresión regular /b[aiu]g/para hacer esto. El [aiu]es la clase de caracteres que sólo coincidirá con los personajes a, i, o u.",
+      "code": "let bigStr = 'big'; let bagStr = 'bag'; let bugStr = 'bug'; let bogStr = 'bog'; let bgRegex = /b[aiu]g/; bigStr.match(bgRegex); bagStr.match(bgRegex); bugStr.match(bgRegex); bogStr.match(bgRegex); ",
+      "example": "En orden, los cuatro match llamadas volverían los valores ['big'], ['bag'], ['bug'], y null."
+    },
+    {
+      "title": "Coincidir con un rango de caracteres",
+      "action": "Dentro de un conjunto de caracteres, se puede definir un rango de caracteres para que coincida con el uso de un carácter de guión: -.  Por ejemplo, para que coincida con las letras minúsculas aa través eusaría [a-e].",
+      "code": "let catStr = 'cat'; let batStr = 'bat'; let matStr = 'mat'; let bgRegex = /[a-e]at/; catStr.match(bgRegex); batStr.match(bgRegex); matStr.match(bgRegex); ",
+      "example": "En orden, las tres match llamadas volverían los valores ['cat'], ['bat']y null."
+    },
+    {
+      "title": "Coincidir números y letras del alfabeto",
+      "action": "El uso del guión ( -) para hacer coincidir un rango de caracteres no se limita a letras. También funciona para hacer coincidir un rango de números. Por ejemplo, /[0-5]/coincide con cualquier número entre 0y 5, incluido 0y 5. Además, es posible combinar un rango de letras y números en un solo juego de caracteres. ",
+      "code": "let jennyStr = 'Jenny8675309'; let myRegex = /[a-z0-9]/ig; jennyStr.match(myRegex); ",
+      "example": "jennyStr.match(myRegex); "
+    },
+    {
+      "title": "Coincidir con caracteres individuales no especificados",
+      "action": "Hasta ahora, ha creado un conjunto de caracteres que desea hacer coincidir, pero también puede crear un conjunto de caracteres que no desea hacer coincidir. Estos tipos de juegos de caracteres se denominan juegos de caracteres negados. Para crear un conjunto de caracteres negado, coloque un carácter de intercalación ( ^) después del corchete de apertura y antes de los caracteres que no desea hacer coincidir.",
+      "code": "Por ejemplo, /[^aeiou]/gi coincide con todos los caracteres que no son vocales. Tenga en cuenta que caracteres  como ., !, [, @, /y el espacio en blanco se emparejan.",
+      "example": "Sólo el conjunto de caracteres negada vocal excluye los caracteres vocales."
+    },
+    {
+      "title": "Coincidir con los personajes que aparecen una o más veces",
+      "action": "A veces, es necesario hacer coincidir un caracter (o grupo de caracteres que aparece una o más veces seguidas. Esto significa que ocurre al menos una vez y puede repetirse. Puede utilizar el +carácter para comprobar si ese es el caso. Recuerde, el personaje o patrón debe estar presente de forma consecutiva. Es decir, el personaje tiene que repetir uno tras otro.",
+      "code": "Por ejemplo, /a+/gencontraría una coincidencia abcy regresaría ['a']. Debido a +eso, también encontraría una única coincidencia aabcy regresaría ['aa'].",
+      "example": "Si, en cambio, estuviera verificando la cadena abab, encontraría dos coincidencias y regresaría ['a', 'a']porque los acaracteres no están en una fila, hay un bentre ellos. Finalmente, dado que no hay un no aen la cadena bcd, no encontraría una coincidencia."
+    },
+    {
+      "title": "Coincidir con personajes que aparecen cero o más veces",
+      "action": "El último desafío utilizó el +signo más para buscar caracteres que aparecen una o más veces. También hay una opción que coincide con los caracteres que aparecen cero o más veces. El carácter de hacerlo es el asterisco o estrella: *.",
+      "code": "let soccerWord = 'gooooooooal!'; let gPhrase = 'gut feeling'; let oPhrase = 'over the moon'; let goRegex = /go*/; ",
+      "example": "soccerWord.match(goRegex); gPhrase.match(goRegex); oPhrase.match(goRegex);"
+    },
+    {
+      "title": "Encuentra caracteres con lazy math",
+      "action": "En las expresiones regulares, una coincidencia codiciosa encuentra la parte más larga posible de una cadena que se ajusta al patrón de expresiones regulares y la devuelve como una coincidencia. La alternativa se llama coincidencia diferida , que encuentra la parte más pequeña posible de la cadena que satisface el patrón de expresiones regulares.",
+      "code": "expresión regular /t[a-z]*i/a la cadena 'titanic'. Esta expresión regular es básicamente un patrón que comienza con t, termina con iy tiene algunas letras en el medio. Las expresiones regulares son codiciosas por defecto, por lo que la coincidencia volvería ['titani']. Encuentra la subcadena más grande posible para ajustarse al patrón.",
+      "example": "Sin embargo, puedes usar el ?personaje para cambiarlo a una coincidencia perezosa. 'titanic'comparado con la expresión regular ajustada de las /t[a-z]*?i/devoluciones ['ti']. Nota: Se debe evitar analizar HTML con expresiones regulares, pero el patrón que coincide con una cadena HTML con expresiones regulares está completamente bien."
     }
   ]
 }
