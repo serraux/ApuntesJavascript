@@ -77,6 +77,174 @@
       "action": "Crear elementos html en javascritpt",
       "code": "const myH2 = document.createElement('h2');",
       "example": " const myArticle = document.createElement('article')"
+    },
+    {
+      "title": "Establecer parámetros predeterminados",
+      "action": "Establecer parámetros predeterminados para sus funciones",
+      "code": "const greeting = (name = 'Anonymous') => 'Hello ' + name;",
+      "example": "print(greeting('John'))//Hello John"
+    },
+    {
+      "title": "Parámetro rest",
+      "action": "Parámetro rest para los parámetros de función. El parámetro rest elimina la necesidad de verificar la matriz args y nos permite aplicar map(), filter() y reduce() en la matriz de parámetros. Los … puntos es el operador que va acompañado en este ejemplo de la palabra args",
+      "code": "function howMany(...args) {  return --You have passed-- + args.length +-- arguments.--;}",
+      "example": "data"
+    },
+    {
+      "title": "El método reduce() ",
+      "action": "El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.",
+      "code": "Array.prototype.reduce()",
+      "example": "const array1 = [1, 2, 3, 4] const reducer = (accumulator, currentValue) => accumulator + currentValue"
+    },
+    {
+      "title": "Operador de propagación",
+      "action": "Operador de propagación , que nos permite expandir matrices y otras expresiones en lugares donde se esperan múltiples parámetros o elementos.",
+      "code": "var arr = [6, 89, 3, 45]; var maximus = Math.max.apply(null, arr);",
+      "example": "Tuvimos que usar Math.max.apply(null, arr) porque Math.max(arr)devuelve NaN. Math.max()espera argumentos separados por comas, pero no una matriz. El operador de propagación hace que esta sintaxis sea mucho mejor de leer y mantener. el operador de propagación solo funciona en el lugar, como en un argumento para una función o en un literal de matriz"
+    },
+    {
+      "title": "",
+      "action": "La asignación de desestructuración es una sintaxis especial introducida en ES6, para asignar claramente valores tomados directamente de un objeto.",
+      "code": "const {prop1, prop2 } = object;",
+      "example": "const HIGH_TEMPERATURES = {  yesterday: 75,  today: 77,  tomorrow: 80 } const {today, tomorrow} = HIGH_TEMPERATURES"
+    },
+    {
+      "title": "Cambiar nombres con la asignación de desestructuración",
+      "action": "Cambiar nombres con la asignación de desestructuración",
+      "code": "const {names:newName , age:newAge } = user;",
+      "example": "const { johnDoe: { age, email }} = user ----- const { johnDoe: { age:newAge, email:newEmail }} = user"
+    },
+    {
+      "title": "desestructuración para asignar variables de objetos anidados.",
+      "action": "asignación de desestructuración para asignar variables de objetos anidados. Lo que se está copiando es la propiedad y no el objeto en si.",
+      "code": "const {yesterday:{low:newLow,high:newHigh}} = LOCAL_FORECAST;",
+      "example": "const LOCAL_FORECAST = {  yesterday: { low: 61, high: 75 },  today: { low: 64, high: 77 },  tomorrow: { low: 68, high: 80 }}"
+    },
+    {
+      "title": "desestructuración para asignar variables de matrices",
+      "action": "asignación de desestructuración para asignar variables de matrices",
+      "code": "const [a, b] = [1, 2, 3, 4, 5, 6]; const [a, b,,, c] = [1, 2, 3, 4, 5, 6]; ",
+      "example": "data"
+    },
+    {
+      "title": "desestructuración con el parámetro Rest ",
+      "action": "asignación de desestructuración con el parámetro Rest para reasignar elementos de matriz. En algunas situaciones que involucran la desestructuración de matrices, es posible que deseemos recopilar el resto de los elementos en una matriz separada.",
+      "code": "const [a, b, ...arr] = [1, 2, 3, 4, 5, 7]; console.log(a, b); console.log(arr);",
+      "example": "La consola mostraría los valores 1, 2y [3, 4, 5, 7]."
+    },
+    {
+      "title": "desestructuración para pasar un objeto como parámetros de una función",
+      "action": "asignación de desestructuración para pasar un objeto como parámetros de una función. En algunos casos, puede desestructurar el objeto en un argumento de función.",
+      "code": "const profileUpdate = (profileData) => {  const { name, age, nationality, location }= profileData;}",
+      "example": "Esto efectivamente destruye el objeto enviado a la función. Esto también se puede hacer in situ: const profileUpdate = ({ name, age, nationality, location }) => {} Cuando profile Datase pasa a la función anterior, los valores se desestructuran del parámetro de función para su uso dentro de la función."
+    },
+    {
+      "title": " cadenas con literales de plantilla",
+      "action": "Crear cadenas con literales de plantilla. Una nueva característica de ES6 es la plantilla literal . Este es un tipo especial de cuerda que facilita la creación de cuerdas complejas. Los literales de plantilla le permiten crear cadenas de varias líneas y utilizar funciones de interpolación de cadenas para crear cadenas.",
+      "code": "const person = {  name: --Zodiac Hasbro--,  age: 56};const greeting = `Hello, myname is ${person.name}!I am ${person.age} years old.`;console.log(greeting);",
+      "example": "La consola mostrará las cadenas Hello, my name is Zodiac Hasbro!y I am 56 years old."
+    },
+    {
+      "title": "Marcador de posición",
+      "action": "Marcador de posición : ${variable}",
+      "code": "${ y }  ${person.name}",
+      "example": "La ${variable}sintaxis utilizada anteriormente es un marcador de posición. Básicamente, ya no tendrá que usar la concatenación con el +operador. Para agregar variables a cadenas, simplemente suelte la variable en una cadena de plantilla y envuélvala con ${ y }."
+    },
+    {
+      "title": "cadenas literales",
+      "action": "Aplicación de cadenas literales",
+      "code": "for(var i= 0; i < arr.length; i++){ failureItems[i] = `<li class=--text-warning-- >${arr[i]}</li>`; }",
+      "example": "salida:[  '<li class=--text-warning-->no-var</li>',   '<li class=--text-warning-->var-on-top</li>',  '<li class=--text-warning-->linebreak</li>' ]"
+    },
+    {
+      "title": "declaraciones concisas de literales de objetos",
+      "action": "Escribir declaraciones concisas de literales de objetos utilizando la abreviatura de propiedades de objeto",
+      "code": "const getMousePosition = (x, y) => ({   x: x,   y: y }); se puede traducir como: const getMousePosition = (x, y) => ({ x, y });",
+      "example": "getMousePositiones una función simple que devuelve un objeto que contiene dos propiedades. ES6 proporciona el azúcar sintáctico para eliminar la redundancia de tener que escribir x: x. Simplemente puede escribir xuna vez y se convertirá en x: x(o algo equivalente) bajo el capó. "
+    },
+    {
+      "title": "funciones declarativas concisas",
+      "action": "Escribir funciones declarativas concisas con ES6",
+      "code": "const person = {  name: --Taylor--,  sayHello() {  return `Hello! My name is ${this.name}.`;  }};",
+      "example": "data"
+    },
+    {
+      "title": "constructor ES5",
+      "action": "Definir una función de constructor ES5",
+      "code": "var SpaceShuttle = function(targetPlanet){ this.targetPlanet = targetPlanet;} var zeus = new SpaceShuttle('Jupiter'); ",
+      "example": "En ES5, generalmente definimos una constructor función y usamos la newpalabra clave para crear una instancia de un objeto."
+    },
+    {
+      "title": "crear objetos, utilizando la palabra clave class",
+      "action": " ES6 proporciona una nueva sintaxis para crear objetos, utilizando la palabra clave class .",
+      "code": "class SpaceShuttle { constructor(targetPlanet){ this.targetPlanet = targetPlanet; }} const zeus = new SpaceShuttle('Jupiter');",
+      "example": "Cabe señalar que la classpalabra clave declara una nueva función, a la que se agrega un constructor. Este constructor se invoca cuando newse llama para crear un nuevo objeto. Nota: UpperCamelCase debe usarse por convención para los nombres de clase de ES6, como se SpaceShuttleusó anteriormente."
+    },
+    {
+      "title": "getters y setters",
+      "action": "Utilice captadores y definidores para controlar el acceso a un objeto. Las funciones de obtención están destinadas a simplemente devolver (obtener) el valor de la variable privada de un objeto al usuario sin que el usuario acceda directamente a la variable privada. Las funciones de establecimiento están destinadas a modificar (establecer) el valor de la variable privada de un objeto en función del valor pasado a la función de establecimiento. Este cambio podría implicar cálculos o incluso sobrescribir completamente el valor anterior. ",
+      "code": "class Book {  constructor(author) {    this._author = author;  }  --- getter  get writer(){    return this._author;  }  --- setter  set writer(updatedAuthor) { this._author = updatedAuthor;  }}",
+      "example": "const novel = new Book('anonymous') console.log(novel.writer) novel.writer = 'newAuthor' console.log(novel.writer)//La consola mostraría las cadenas anonymousy newAuthor. Observe la sintaxis utilizada para invocar al getter y al setter."
+    },
+    {
+      "title": "Crear un script de módulo",
+      "action": "JavaScript comenzó con un pequeño papel que desempeñar en una web que de otro modo sería principalmente HTML. Hoy en día, es enorme y algunos sitios web están construidos casi en su totalidad con JavaScript. Para hacer que JavaScript sea más modular, limpio y fácil de mantener; ES6 introdujo una forma de compartir fácilmente código entre archivos JavaScript. Esto implica exportar partes de un archivo para usar en uno o más archivos e importar las partes que necesita, donde las necesita. Para aprovechar esta funcionalidad, debe crear un script en su documento HTML con una extensión typede module. ",
+      "code": "<script type=--module-- src=--filename.js--></script>",
+      "example": "Un script que usa este moduletipo ahora puede usar las funciones importy exportque aprenderá en los próximos desafíos."
+    },
+    {
+      "title": "exportación para compartir un bloque de código",
+      "action": "magine un archivo llamado math_functions.jsque contiene varias funciones relacionadas con operaciones matemáticas. Uno de ellos se almacena en una variable add, que toma dos números y devuelve su suma. Desea utilizar esta función en varios archivos JavaScript diferentes. Para compartirlo con estos otros archivos, primero debe exporthacerlo.",
+      "code": "export const add = (x, y) => { return x + y;}",
+      "example": "Lo anterior es una forma común de exportar una sola función, pero puede lograr lo mismo como esto: const add = (x, y) => {  return x + y} export { add } Cuando exporta una variable o función, puede importarla en otro archivo y usarla sin tener que volver a escribir el código. Puede exportar varias cosas repitiendo el primer ejemplo para cada cosa que desee exportar, o colocándolas todas en la declaración de exportación del segundo ejemplo, así: export { add, subtract }"
+    },
+    {
+      "title": "Reutilizar código JavaScript mediante la importación",
+      "action": "importle permite elegir qué partes de un archivo o módulo cargar. En la lección anterior, los ejemplos exportados adddel math_functions.jsarchivo. A continuación, le mostramos cómo puede importarlo para usarlo en otro archivo:",
+      "code": "import { add } from './math_functions.js';",
+      "example": "Aquí, importencontrará adden math_functions.js, importará solo esa función para su uso e ignorará el resto. El ./le dice a la importación que busque el math_functions.jsarchivo en la misma carpeta que el archivo actual. La ruta de archivo relativa ( ./) y la extensión de archivo ( .js) son necesarias cuando se utiliza la importación de esta manera. Puede importar más de un elemento del archivo agregándolos en la importdeclaración como esta: import { add, subtract } from './math_functions.js'"
+    },
+    {
+      "title": "Utilice * para importar todo desde un archivo",
+      "action": "Suponga que tiene un archivo y desea importar todo su contenido al archivo actual. Esto se puede hacer con la import * assintaxis. A continuación, se muestra un ejemplo en el que el contenido de un archivo con nombre math_functions.jsse importa a un archivo en el mismo directorio:",
+      "code": "import * as myMathModule from --./math_functions.js--;",
+      "example": "La importdeclaración anterior creará un objeto llamado myMathModule. Este es solo un nombre de variable, puedes nombrarlo como quieras. El objeto contendrá todas las exportaciones desde math_functions.jsél, por lo que puede acceder a las funciones como lo haría con cualquier otra propiedad de objeto. A continuación, le indicamos cómo puede utilizar las funciones addy subtractque se importaron: myMathModule.add(2,3); myMathModule.subtract(5,3)"
+    },
+    {
+      "title": "Crear un respaldo de exportación con exportación predeterminada",
+      "action": "En la exportlección, aprendió sobre la sintaxis a la que se hace referencia como exportación con nombre . Esto le permitió hacer que múltiples funciones y variables estuvieran disponibles para su uso en otros archivos. Hay otra exportsintaxis que necesita conocer, conocida como exportación predeterminada . Por lo general, utilizará esta sintaxis si solo se exporta un valor de un archivo. También se utiliza para crear un valor de reserva para un archivo o módulo. A continuación se muestran ejemplos que utilizan export default:",
+      "code": "export default function add(x, y) {  return x + y;} export default function(x, y) { return x + y;}",
+      "example": "data"
+    },
+    {
+      "title": "Importar una exportación predeterminada",
+      "action": "En el último desafío, aprendiste sobre export defaultsus usos. Para importar una exportación predeterminada, debe utilizar una importsintaxis diferente . En el siguiente ejemplo, addes la exportación predeterminada del math_functions.jsarchivo. A continuación se explica cómo importarlo:",
+      "code": "import add from --./math_functions.js--;",
+      "example": "La sintaxis difiere en un lugar clave. El valor importado, addno está rodeado por llaves ( {}). addaquí es simplemente un nombre de variable para cualquiera que sea la exportación predeterminada del math_functions.jsarchivo. Puede utilizar cualquier nombre aquí al importar un archivo."
+    },
+    {
+      "title": "Crear una promesa de JavaScript",
+      "action": "Una promesa en JavaScript es exactamente lo que parece: la usas para hacer una promesa de hacer algo, generalmente de forma asincrónica. Cuando la tarea se completa, cumple con su promesa o no lo hace. Promisees una función de constructor, por lo que debe usar la newpalabra clave para crear una. Toma una función, como argumento, con dos parámetros: resolvey reject. Estos son métodos que se utilizan para determinar el resultado de la promesa. La sintaxis se ve así:",
+      "code": "const myPromise = new Promise((resolve, reject) => {});",
+      "example": "data"
+    },
+    {
+      "title": "Complete a Promise with resolve and reject",
+      "action": "na promesa tiene tres estados: pending, fulfilled, y rejected. La promesa que creaste en el último desafío está estancada para siempre en el pendingestado porque no agregaste una forma de completar la promesa. Los parámetros resolvey rejectdados al argumento de promesa se utilizan para hacer esto. resolvese usa cuando desea que su promesa tenga éxito y rejectse usa cuando desea que fracase. Estos son métodos que toman un argumento, como se ve a continuación.",
+      "code": "const myPromise = new Promise((resolve, reject) => {  if(condition here) {    resolve(--Promise was fulfilled--);  } else {    reject(--Promise was rejected--);  }});",
+      "example": "El ejemplo anterior usa cadenas para el argumento de estas funciones, pero realmente puede ser cualquier cosa. A menudo, podría ser un objeto del que usaría datos para colocar en su sitio web o en otro lugar."
+    },
+    {
+      "title": "Maneje una promesa cumplida con then",
+      "action": "Las promesas son más útiles cuando tiene un proceso que toma una cantidad de tiempo desconocida en su código (es decir, algo asincrónico), a menudo una solicitud del servidor. Cuando realiza una solicitud de servidor, lleva algo de tiempo y, una vez que se completa, Generalmente desea hacer algo con la respuesta del servidor. Esto se puede lograr utilizando el thenmétodo. El thenmétodo se ejecuta inmediatamente después de que se cumpla su promesa con resolve. He aquí un ejemplo:",
+      "code": "myPromise.then(result => {});",
+      "example": "result proviene del argumento dado al método resolve."
+    },
+    {
+      "title": "Maneje una promesa rechazada con catch",
+      "action": "catches el método utilizado cuando su promesa ha sido rechazada. Se ejecuta inmediatamente después de rejectllamar al método de una promesa . Esta es la sintaxis:",
+      "code": "myPromise.catch(error => {});",
+      "example": "errores el argumento que se pasa al rejectmétodo."
     }
   ]
 }
