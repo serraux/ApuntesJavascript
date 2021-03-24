@@ -112,3 +112,47 @@ console.log(zeus.targetPlanet);
 Utilice * para importar todo desde un archivo*/
 
 /* https://raw.githubusercontent.com/serraux/Javascript/main/sources/notes.json */
+
+/* Busqueda de la palabra más larga */
+function findLongestWordLength(str) {
+  return Math.max(...str.split(" ").map((word) => word.length));
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+/* Verifica si una cadena finaliza con el argumento enviado */
+function confirmEnding(str, target) {
+  if (str.length > 0 && target.length > 0) {
+    let regex = new RegExp(target + "$", "i");
+
+    return regex.test(str);
+  } else {
+    return "revisar los argumento enviados";
+  }
+
+  // return;
+}
+
+console.log(confirmEnding("loiu", "uy"));
+
+/* Duplicar el valor de una cadena */
+/* codigo encontrado - utiliza recursividad*/
+function repeatStringNumTimes(str, num) {
+  return num > 0 ? str + repeatStringNumTimes(str, num - 1) : "";
+}
+/* mi c{odigo */
+function repeatStringNumTimes(str, num) {
+  let cad = "";
+  if (num < 0) {
+    return cad;
+  } else {
+    for (let i = 0; i < num; i++) {
+      cad += str;
+    }
+  }
+
+  return cad;
+}
+/* Reemplaza laprimera letra deuna palabra a mayúscula */
+function titleCase(str) {
+  return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
+}
