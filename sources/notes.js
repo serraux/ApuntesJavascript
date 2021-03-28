@@ -156,3 +156,15 @@ function repeatStringNumTimes(str, num) {
 function titleCase(str) {
   return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
 }
+//funcion para dividir un arreglo
+function chunkArrayInGroups(arr, size) {
+  if (arr.length <= size) {
+    return [arr];
+  } else {
+    return [arr.slice(0, size)].concat(
+      chunkArrayInGroups(arr.slice(size), size)
+    );
+  }
+}
+
+console.log(chunkArrayInGroups(["0", "1", "2", "3", "4"], 3));
