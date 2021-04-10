@@ -8,9 +8,18 @@ const array = [1, 2, 3];
 /* Ejemplo para utilizar splice */
 
 const month = ["jan", "mar", "apr", "jun"];
-console.log(month);
+//console.log(month);
 month.splice(1, 0, "feb");
+//console.log(month);
+//month.splice(2);
+console.log("month ");
 console.log(month);
+const arrBefore = month.splice(0, 2);
+console.log("Before ");
+console.log(arrBefore);
 
-month.splice(3);
-console.log(month);
+const arrAfter = month.splice(1);
+console.log("month After");
+console.log(arrAfter);
+console.log("concat ");
+console.log(arrBefore.concat(arrAfter));
